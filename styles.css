@@ -1,38 +1,62 @@
 body {
+  background-color: #fff;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  background: #111;
   margin: 0;
+  overflow: hidden;
 }
 
 .container {
+  display: none;
   text-align: center;
 }
 
-img {
-  width: 90vw;
-  max-width: 1200px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+.container img {
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
-.buttons {
-  margin-top: 20px;
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+/* Star-shaped neon buttons */
+.nav-buttons {
+  position: fixed;
+  bottom: 30px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
 }
 
 button {
-  background-color: #fff;
+  background-color: yellow;
+  color: hotpink;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 1.5rem;
   border: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  font-size: 1rem;
-  border-radius: 6px;
+  padding: 15px 30px;
+  border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s;
+  box-shadow: 0 0 20px hotpink;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  background-color: #ddd;
+  transform: scale(1.2);
+  box-shadow: 0 0 40px hotpink;
+}
+
+button span {
+  font-weight: bold;
 }
